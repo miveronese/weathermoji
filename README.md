@@ -1,0 +1,1 @@
+A small Twitter bot that'll tweet the weather in San Francisco.
