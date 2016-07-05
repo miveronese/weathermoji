@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-  
+
   api := NewWeatherApi(os.Getenv("OPENWEATHER_API_KEY"))
 
   fmt.Print(api.Now())
