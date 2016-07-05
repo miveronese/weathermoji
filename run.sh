@@ -1,3 +1,7 @@
 #!/bin/bash
 
-go build . && export $(cat .env | xargs) && ./weathermoji
+go get ./... &&
+    gofmt -w *.go &&
+    go build . &&
+    export $(cat .env | xargs) &&
+    ./weathermoji
