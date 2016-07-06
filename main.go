@@ -18,12 +18,10 @@ func main() {
 
 	forecast := api.Now()
 
-	tweet := ConvertToString(forecast)
+	emojis := ConvertToEmoji(ConvertToString(forecast))
 
-	// twitterApi.PostTweet("my second tweet")
+	twitterApi.PostTweet(emojis)
 
 	fmt.Println(twitterApi)
-
-	fmt.Println(tweet)
-
+	fmt.Println(emojis)
 }
