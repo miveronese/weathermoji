@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/peterhellberg/emojilib"
 )
 
@@ -42,14 +43,14 @@ var ids = map[int]string{
 	620: ":snowflake:",
 	621: ":snowflake:",
 	622: ":snowflake:",
-	701: ":fog:",
-	711: ":fog:",
-	721: ":fog:",
-	731: ":fog:",
-	741: ":fog:",
-	751: ":fog:",
-	761: ":fog:",
-	771: ":fog:",
+	701: ":foggy:",
+	711: ":foggy:",
+	721: ":foggy:",
+	731: ":foggy:",
+	741: ":foggy:",
+	751: ":foggy:",
+	761: ":foggy:",
+	771: ":foggy:",
 	781: ":cloud_with_tornado:",
 	800: ":rainbow:",
 	801: ":cloud:",
