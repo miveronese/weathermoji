@@ -8,7 +8,7 @@ type TwitterService struct {
 	Api *anaconda.TwitterApi
 }
 
-func NewTwiiterService(consumerKey string, consumerSecret string, apiToken string, apiSecret string) TwitterService {
+func NewTwitterService(consumerKey string, consumerSecret string, apiToken string, apiSecret string) TwitterService {
 	anaconda.SetConsumerKey(consumerKey)
 	anaconda.SetConsumerSecret(consumerSecret)
 	api := anaconda.NewTwitterApi(apiToken, apiSecret)
@@ -16,4 +16,8 @@ func NewTwiiterService(consumerKey string, consumerSecret string, apiToken strin
 	return TwitterService{
 		Api: api,
 	}
+}
+
+func (self TwitterService) PostTweet(text string) {
+	self.Api.PostTweet(text, nil)
 }
