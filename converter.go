@@ -79,7 +79,6 @@ var ids = map[int]string{
 }
 
 func ConvertToString(forecast Forecast) string {
-
 	return fmt.Sprint("weather: ", ids[forecast.WeatherId],
 		" humidity: ", forecast.Humidity,
 		", high: ", forecast.High,
@@ -89,6 +88,5 @@ func ConvertToString(forecast Forecast) string {
 }
 
 func ConvertToEmoji(text string) string {
-
 	return emojilib.ReplaceWithPadding(text)
 }
