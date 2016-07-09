@@ -7,16 +7,16 @@ import (
 )
 
 var ids = map[int]string{
-	200: ":thunder_cloud_and_rain:",
-	201: ":thunder_cloud_and_rain:",
-	202: ":thunder_cloud_and_rain:",
-	210: ":thunder_cloud_and_rain:",
-	211: ":thunder_cloud_and_rain:",
-	212: ":thunder_cloud_and_rain:",
-	221: ":thunder_cloud_and_rain:",
-	230: ":thunder_cloud_and_rain:",
-	231: ":thunder_cloud_and_rain:",
-	232: ":thunder_cloud_and_rain:",
+	200: ":thunder_cloud_and_rain: :zap: :umbrella:",
+	201: ":thunder_cloud_and_rain: :zap: :umbrella:",
+	202: ":thunder_cloud_and_rain: :zap: :umbrella:",
+	210: ":thunder_cloud_and_rain: :zap: :umbrella:",
+	211: ":thunder_cloud_and_rain: :zap: :umbrella:",
+	212: ":thunder_cloud_and_rain: :zap: :umbrella:",
+	221: ":thunder_cloud_and_rain: :zap: :umbrella:",
+	230: ":thunder_cloud_and_rain: :zap: :umbrella:",
+	231: ":thunder_cloud_and_rain: :zap: :umbrella:",
+	232: ":thunder_cloud_and_rain: :zap: :umbrella:",
 	300: ":closed_umbrella:",
 	301: ":closed_umbrella:",
 	302: ":closed_umbrella:",
@@ -79,16 +79,16 @@ var ids = map[int]string{
 }
 
 func ConvertToString(forecast Forecast) string {
-
-	return fmt.Sprint("weather: ", ids[forecast.WeatherId],
-		" humidity: ", forecast.Humidity,
-		", high: ", forecast.High,
-		", low: ", forecast.Low,
-		", windspeed: ", forecast.WindSpeed, " ",
+	return fmt.Sprint(
+		ids[forecast.WeatherId],
+		"  :clock12:", forecast.Temperature,
+		"˚F  :arrow_up:", forecast.High,
+		"˚F  :arrow_down:", forecast.Low, "˚F #",
+		forecast.WeatherLevel,
+		" #weather #sanfrancisco",
 	)
 }
 
 func ConvertToEmoji(text string) string {
-
 	return emojilib.ReplaceWithPadding(text)
 }

@@ -1,9 +1,10 @@
 package main
 
 import (
-	owm "github.com/briandowns/openweathermap"
 	"log"
 	"os"
+
+	owm "github.com/briandowns/openweathermap"
 )
 
 type Forecast struct {
@@ -15,6 +16,7 @@ type Forecast struct {
 	Weather      string
 	WeatherLevel string // TODO map from openweathermap.org/weather-conditions to some constants?
 	WeatherId    int
+	Temperature  float64
 }
 
 type WeatherApi struct {
@@ -40,6 +42,7 @@ func (self WeatherApi) Now() Forecast {
 	return Forecast{
 		Humidity:     weather.Main.Humidity,
 		High:         weather.Main.TempMax,
+		Temperature:  weather.Main.Temp,
 		Low:          weather.Main.TempMin,
 		WindSpeed:    weather.Wind.Speed,
 		Clouds:       weather.Clouds.All,
