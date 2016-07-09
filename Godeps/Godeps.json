@@ -1,0 +1,43 @@
+{
+	"ImportPath": "github.com/miveronese/weathermoji",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v74",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/ChimeraCoder/anaconda",
+			"Rev": "00ecb7b4510497dc28cd46a598007ab8fe01f889"
+		},
+		{
+			"ImportPath": "github.com/ChimeraCoder/tokenbucket",
+			"Rev": "c5a927568de7aad8a58127d80bcd36ca4e71e454"
+		},
+		{
+			"ImportPath": "github.com/azr/backoff",
+			"Rev": "53511d3c733003985b0b76f733df1f4d0095ee6a"
+		},
+		{
+			"ImportPath": "github.com/briandowns/openweathermap",
+			"Comment": "0.5-69-g30dadd6",
+			"Rev": "30dadd6641b6903c9640e883dd755ccd5d00441a"
+		},
+		{
+			"ImportPath": "github.com/dustin/go-jsonpointer",
+			"Rev": "2efc9fef1d9421a8d252a32e20beb10cecd2bbca"
+		},
+		{
+			"ImportPath": "github.com/dustin/gojson",
+			"Rev": "2e71ec9dd5adce3b168cd0dbde03b5cc04951c30"
+		},
+		{
+			"ImportPath": "github.com/garyburd/go-oauth/oauth",
+			"Rev": "719b069913e1151a73ea30d2ea4f90deda3ce234"
+		},
+		{
+			"ImportPath": "github.com/peterhellberg/emojilib",
+			"Rev": "7190424c68e6e8d4d9c12fc4407c50d342fe6aad"
+		}
+	]
+}
