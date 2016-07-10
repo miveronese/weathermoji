@@ -20,7 +20,7 @@ func main() {
 
 	for {
 		forecast := api.Now()
-		emojis := ConvertToEmoji(ConvertToString(forecast))
+		emojis := ConvertToString(forecast)
 		fmt.Println(time.Now())
 		fmt.Println(forecast.Weather)
 		gif, _ := giphyClient.Random(forecast.WeatherLevel)

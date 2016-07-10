@@ -14,7 +14,7 @@ func TestConvertToString(t *testing.T) {
 		WeatherLevel: "fog",
 		WeatherId:    801,
 	}
-	expected := "weather: :cloud: humidity: 82, high: 64.99, low: 53.01, windspeed: 8.05 "
+	expected := "☁️   🕛 0˚F  ⬆️ 64.99˚F  ⬇️ 53.01˚F #fog #weather #sanfrancisco"
 	result := ConvertToString(fakeStruct)
 	if result != expected {
 		t.Fatalf("Expected %s, got %s", expected, result)

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/peterhellberg/emojilib"
 )
@@ -78,17 +79,23 @@ var ids = map[int]string{
 	962: ":thunder_cloud_and_rain:",
 }
 
+func removeEmptySpaces(description string) string {
+	result := strings.Replace(description, " ", "", -1)
+	return result
+}
+
 func ConvertToString(forecast Forecast) string {
-	return fmt.Sprint(
+	forecastString := fmt.Sprint(
 		ids[forecast.WeatherId],
 		"  :clock12:", forecast.Temperature,
 		"˚F  :arrow_up:", forecast.High,
 		"˚F  :arrow_down:", forecast.Low, "˚F #",
-		forecast.WeatherLevel,
+		removeEmptySpaces(forecast.WeatherLevel),
 		" #weather #sanfrancisco",
 	)
+	return convertToEmoji(forecastString)
 }
 
-func ConvertToEmoji(text string) string {
+func convertToEmoji(text string) string {
 	return emojilib.ReplaceWithPadding(text)
 }
