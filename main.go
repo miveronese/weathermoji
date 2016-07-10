@@ -16,20 +16,19 @@ func main() {
 	)
 	giphyClient := NewGiphyAPI(os.Getenv("GIPHY_API_KEY"))
 
-	forecast := api.Now()
-	emojis := ConvertToEmoji(ConvertToString(forecast))
 	// urlGif := GrabGiphy("#" + forecast.WeatherLevel + " #weather")
 
-	fmt.Println(twitterAPI)
-
 	for {
+		forecast := api.Now()
+		emojis := ConvertToEmoji(ConvertToString(forecast))
 		fmt.Println(time.Now())
 		fmt.Println(forecast.Weather)
 		gif, _ := giphyClient.Random(forecast.WeatherLevel)
-		fmt.Println(emojis + " " + gif.URL)
 
+		fmt.Println(emojis + " " + gif.URL)
 		fmt.Println(gif.URL)
 		twitterAPI.PostTweet(emojis + " " + gif.URL)
-		time.Sleep(4 * time.Hour)
+		time.Sleep(2 * time.Hour)
+		fmt.Println(twitterAPI)
 	}
 }
