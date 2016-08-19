@@ -14,7 +14,7 @@ type Forecast struct {
 	WindSpeed    float64
 	Clouds       int
 	Weather      string
-	WeatherLevel string // TODO map from openweathermap.org/weather-conditions to some constants?
+	WeatherLevel string
 	WeatherId    int
 	Temperature  float64
 }
